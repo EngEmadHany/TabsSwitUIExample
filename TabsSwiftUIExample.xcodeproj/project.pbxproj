@@ -7,26 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D49FA7329263C0A002FC5AA /* NewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D49FA7229263C0A002FC5AA /* NewView.swift */; };
+		9D49FA7529263C15002FC5AA /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D49FA7429263C15002FC5AA /* FavoriteView.swift */; };
 		C21692682556DEA2004F2111 /* TabsSwiftUIExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21692672556DEA2004F2111 /* TabsSwiftUIExampleApp.swift */; };
 		C216926A2556DEA2004F2111 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21692692556DEA2004F2111 /* ContentView.swift */; };
 		C216926C2556DEA3004F2111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C216926B2556DEA3004F2111 /* Assets.xcassets */; };
 		C216926F2556DEA3004F2111 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C216926E2556DEA3004F2111 /* Preview Assets.xcassets */; };
-		C296B5322556E01300D94280 /* Demo1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296B5312556E01300D94280 /* Demo1View.swift */; };
-		C296B5362556E02000D94280 /* Demo2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296B5352556E02000D94280 /* Demo2View.swift */; };
-		C296B5392556E02B00D94280 /* Demo3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296B5382556E02B00D94280 /* Demo3View.swift */; };
+		C296B5322556E01300D94280 /* TrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296B5312556E01300D94280 /* TrendingView.swift */; };
+		C296B5362556E02000D94280 /* GainersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296B5352556E02000D94280 /* GainersView.swift */; };
+		C296B5392556E02B00D94280 /* LosersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296B5382556E02B00D94280 /* LosersView.swift */; };
 		C2D182F62575819400CB9F9B /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D182F52575819400CB9F9B /* Tabs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D49FA7229263C0A002FC5AA /* NewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewView.swift; sourceTree = "<group>"; };
+		9D49FA7429263C15002FC5AA /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		C21692642556DEA2004F2111 /* TabsSwiftUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabsSwiftUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21692672556DEA2004F2111 /* TabsSwiftUIExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsSwiftUIExampleApp.swift; sourceTree = "<group>"; };
 		C21692692556DEA2004F2111 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C216926B2556DEA3004F2111 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C216926E2556DEA3004F2111 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C21692702556DEA3004F2111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C296B5312556E01300D94280 /* Demo1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo1View.swift; sourceTree = "<group>"; };
-		C296B5352556E02000D94280 /* Demo2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo2View.swift; sourceTree = "<group>"; };
-		C296B5382556E02B00D94280 /* Demo3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo3View.swift; sourceTree = "<group>"; };
+		C296B5312556E01300D94280 /* TrendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingView.swift; sourceTree = "<group>"; };
+		C296B5352556E02000D94280 /* GainersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GainersView.swift; sourceTree = "<group>"; };
+		C296B5382556E02B00D94280 /* LosersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosersView.swift; sourceTree = "<group>"; };
 		C2D182F52575819400CB9F9B /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,9 +86,11 @@
 		C296B5302556E00200D94280 /* DemoViews */ = {
 			isa = PBXGroup;
 			children = (
-				C296B5312556E01300D94280 /* Demo1View.swift */,
-				C296B5352556E02000D94280 /* Demo2View.swift */,
-				C296B5382556E02B00D94280 /* Demo3View.swift */,
+				C296B5312556E01300D94280 /* TrendingView.swift */,
+				C296B5352556E02000D94280 /* GainersView.swift */,
+				C296B5382556E02B00D94280 /* LosersView.swift */,
+				9D49FA7229263C0A002FC5AA /* NewView.swift */,
+				9D49FA7429263C15002FC5AA /* FavoriteView.swift */,
 			);
 			path = DemoViews;
 			sourceTree = "<group>";
@@ -158,12 +164,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C296B5362556E02000D94280 /* Demo2View.swift in Sources */,
-				C296B5322556E01300D94280 /* Demo1View.swift in Sources */,
-				C296B5392556E02B00D94280 /* Demo3View.swift in Sources */,
+				C296B5362556E02000D94280 /* GainersView.swift in Sources */,
+				C296B5322556E01300D94280 /* TrendingView.swift in Sources */,
+				C296B5392556E02B00D94280 /* LosersView.swift in Sources */,
 				C216926A2556DEA2004F2111 /* ContentView.swift in Sources */,
 				C21692682556DEA2004F2111 /* TabsSwiftUIExampleApp.swift in Sources */,
+				9D49FA7329263C0A002FC5AA /* NewView.swift in Sources */,
 				C2D182F62575819400CB9F9B /* Tabs.swift in Sources */,
+				9D49FA7529263C15002FC5AA /* FavoriteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

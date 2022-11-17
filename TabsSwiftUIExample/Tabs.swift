@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct Tab {
-    var icon: Image?
     var title: String
 }
 
@@ -30,22 +29,17 @@ struct Tabs: View {
                                 }
                             }, label: {
                                 VStack(spacing: 0) {
-                                    HStack {
-                                        // Image
-                                        AnyView(tabs[row].icon)
-                                            .foregroundColor(.white)
-                                            .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 0))
-
+                                    HStack(spacing: 25) {
                                         // Text
                                         Text(tabs[row].title)
-                                            .font(Font.system(size: 18, weight: .semibold))
+                                            .font(Font.system(size: 14, weight: .semibold))
                                             .foregroundColor(Color.white)
-                                            .padding(EdgeInsets(top: 10, leading: 3, bottom: 10, trailing: 15))
+
                                     }
-                                    .frame(width: fixed ? (geoWidth / CGFloat(tabs.count)) : .none, height: 52)
+                                    .frame(width: fixed ? (geoWidth / CGFloat(tabs.count)) : .none, height: 40)
                                     // Bar Indicator
-                                    Rectangle().fill(selectedTab == row ? Color.white : Color.clear)
-                                        .frame(height: 3)
+                                    Rectangle().fill(selectedTab == row ? Color.red : Color.clear)
+                                        .frame(width: 65, height: 3)
                                 }.fixedSize()
                             })
                                 .accentColor(Color.white)
@@ -62,7 +56,7 @@ struct Tabs: View {
         }
         .frame(height: 55)
         .onAppear(perform: {
-            UIScrollView.appearance().backgroundColor = UIColor(#colorLiteral(red: 0.6196078431, green: 0.1098039216, blue: 0.2509803922, alpha: 1))
+            UIScrollView.appearance().backgroundColor = .init(Color.black)
             UIScrollView.appearance().bounces = fixed ? false : true
         })
         .onDisappear(perform: {
@@ -74,9 +68,13 @@ struct Tabs: View {
 struct Tabs_Previews: PreviewProvider {
     static var previews: some View {
         Tabs(fixed: true,
-             tabs: [.init(icon: Image(systemName: "star.fill"), title: "Tab 1"),
-                    .init(icon: Image(systemName: "star.fill"), title: "Tab 2"),
-                    .init(icon: Image(systemName: "star.fill"), title: "Tab 3")],
+             tabs: [.init(title: "Trending"),
+                    .init(title: "Gainers"),
+                    .init(title: "Losers"),
+                    .init(title: "New"),
+                    .init(title: "Favorite")
+             
+             ],
              geoWidth: 375,
              selectedTab: .constant(0))
     }

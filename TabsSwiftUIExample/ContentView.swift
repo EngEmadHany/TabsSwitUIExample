@@ -11,23 +11,17 @@ struct ContentView: View {
     @State private var selectedTab: Int = 0
 
     let tabs: [Tab] = [
-        .init(icon: Image(systemName: "music.note"), title: "Music"),
-        .init(icon: Image(systemName: "film.fill"), title: "Movies"),
-        .init(icon: Image(systemName: "book.fill"), title: "Books")
+        .init(title: "Trending"),
+        .init(title: "Gainers"),
+        .init(title: "Losers"),
+        .init(title: "New"),
+        .init(title: "Favorite")
     ]
 
-    init() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor(#colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1))
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
-        UINavigationBar.appearance().isTranslucent = false
-    }
+    
 
     var body: some View {
-        NavigationView {
+        
             GeometryReader { geo in
                 VStack(spacing: 0) {
                     // Tabs
@@ -36,21 +30,24 @@ struct ContentView: View {
                     // Views
                     TabView(selection: $selectedTab,
                             content: {
-                                Demo1View()
+                                TrendingView()
                                     .tag(0)
-                                Demo2View()
+                                GainersView()
                                     .tag(1)
-                                Demo3View()
+                                LosersView()
                                     .tag(2)
+                                NewView()
+                                    .tag(3)
+                                FavoriteView()
+                                    .tag(4)
                             })
                             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 }
-                .foregroundColor(Color(#colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)))
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationTitle("TabsSwiftUIExample")
-                .ignoresSafeArea()
+                .foregroundColor(Color.black)
+                
+               
             }
-        }
+
     }
 }
 
